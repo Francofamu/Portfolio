@@ -7,6 +7,8 @@ import PostgresSQL from "./icons/PostgresSQL.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Wordpress from "./icons/Wordpress.astro"
+import TiendaNube from "./icons/TiendaNube.astro"
 
 const TAGS = {
   NEXT: {
@@ -34,6 +36,16 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: PostgresSQL,
   },
+  WORDPRESS: {
+    name: "Wordpress",
+    class: "bg-[#003159] text-white",
+    icon: Wordpress,
+  },
+  TIENDANUBE: {
+    name: "TiendaNube",
+    class: "bg-[#003159] text-white",
+    icon: TiendaNube,
+  },
 }
 const PROJECTS = [
   {
@@ -42,8 +54,24 @@ const PROJECTS = [
       "Plataforma de reserva para hotel de lujo con pagos instantáneos y gestión integral de reservas para usuarios y proveedores. Desarrollada desde cero con React.js, Node.js, MySQL y Tailwind CSS.",
     link: "https://serena-hotel.vercel.app/",
     github: "https://github.com/Francofamu/Serena-Hotel",
-    image: "/projects/serenahotel.webp",
+    image: "/projects/SerenaHotel.png",
     tags: [TAGS.REACT, TAGS.NODE, TAGS.POSTGRESSQL, TAGS.TAILWIND, ],
+  },
+  {
+    title: "LO DE JORGE  - Parrilla & Restó.",
+    description:
+      "Web institucional de una de las mejores parrillas de la localidad de La Plata. Desarrollada con Wordpress.",
+    link: "https://lodejorge.com/",
+    image: "/projects/LoDeJorge.png",
+    tags: [TAGS.WORDPRESS],
+  },
+  {
+    title: "Hermanas Criollas  - Tradición y Elegancia.",
+    description:
+      "Ecommerce de ropa de campo reversionada. Desarrollo del Diseño y asistencia en la configuración de la página. Desarrollada con Tienda Nube.",
+    link: "https://hermanascriollas.com/",
+    image: "/projects/HermanasCriollas.png",
+    tags: [TAGS.TIENDANUBE],
   },
 ]
 ---
@@ -53,8 +81,8 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform overflow-clip rounded-xl">
+      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-full transition duration-500 md:group-hover:scale-95 rounded-xl opacity-80 hover:opacity-100" loading="lazy" src={image} />
     </div>
   </div>
 
